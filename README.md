@@ -1,13 +1,16 @@
-# RadioactiveDataScience v5.0.0
+# RadioactiveSpaceData v5.0.0
 
-## Multidimensional Radioactive Decay Estimations
+## RadioactiveDataScience What can be create?
+"The first and only Arduino library where Geiger Counter combine with Data Science"
+
+## 1) Multidimensional Radioactive Decay Estimations
 ![3D_preview](https://github.com/user-attachments/assets/586d16b4-6088-4917-b9ea-e49ebb4a5876)
 ## 
 ![2D_preview](https://github.com/user-attachments/assets/1ddea30f-7e8e-4b35-a259-23b3520053ac)
 
 This repository presents a multivariable exponential regression model to estimate **Average CPM** (counts per minute) based on **Time**, **Radiation dose rate (Usv/hr)**, **Standard Deviation of CPM (sdCPM)**, and **Total CPM Count**.
 
-## 1) Model Equation
+## 2) Creating a Unique Model Equation
 
 The predicted average CPM is defined by the following equation:
 
@@ -17,7 +20,7 @@ Where:
 
 <img width="750" alt="formullas2" src="https://github.com/user-attachments/assets/4ceb5d3a-1599-4932-bd29-cc81fadf0e23" />
 
-## 2) Algorithm Logic
+## 3) Creation of Original Algorithm Logic
 
 1. **Input features**:  
    - `Time`  
