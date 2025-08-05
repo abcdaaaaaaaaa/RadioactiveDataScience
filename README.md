@@ -10,7 +10,7 @@
 
 This repository presents a multivariable exponential regression model to estimate **Average CPM** (counts per minute) based on **Time**, **Radiation dose rate (Usv/hr)**, **Standard Deviation of CPM (sdCPM)**, and **Total CPM Count**.
 
-## 2) Creating a Unique Model Equation
+## 2) Development of a Unique Model Equation
 
 The predicted average CPM is defined by the following equation:
 
