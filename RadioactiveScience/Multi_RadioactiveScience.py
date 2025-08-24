@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 import plotly.graph_objects as go
 
-df = pd.read_excel("Radioactive_Data.xlsx")
+df = pd.read_excel("Radioactive_Datas.xlsx")
 
 times = df['Time'].to_numpy()
 usvhr_values = df['Usv/hr'].to_numpy()
@@ -21,12 +21,11 @@ def exponential_decay_regression(t, y):
     lambda_ = -model.coef_[0]
     ln_N0 = model.intercept_
     N0 = np.exp(ln_N0)
+    def decay_func(time): return N0 * np.exp(-lambda_ * time)
     y_pred_log = model.predict(t_masked)
     ss_res = np.sum((log_y - y_pred_log) ** 2)
     ss_tot = np.sum((log_y - np.mean(log_y)) ** 2)
     r2 = 1 - ss_res / ss_tot
-    def decay_func(time):
-        return N0 * np.exp(-lambda_ * time)
     return decay_func, r2
 
 decay_usvhr, r2_usvhr = exponential_decay_regression(times, usvhr_values)
