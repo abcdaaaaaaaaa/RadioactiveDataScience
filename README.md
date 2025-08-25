@@ -1,12 +1,15 @@
-# RadioactiveSpaceData v5.0.0
+# RadioactiveSpaceData v5.1.0
 
 ## RadioactiveDataScience What can be create?
 "The first and only Arduino library where Geiger Counter combine with Data Science"
 
-## 1) Multidimensional Radioactive Decay Estimations
+## 1) Multidimensional Radioactive Decay Estimations in 3 Different Modes
+### 3D Analysis
 ![3D_preview](https://github.com/user-attachments/assets/586d16b4-6088-4917-b9ea-e49ebb4a5876)
-## 
+### Data Visualization
 ![2D_preview](https://github.com/user-attachments/assets/1ddea30f-7e8e-4b35-a259-23b3520053ac)
+### Multi Graph
+![multi_preview](https://github.com/user-attachments/assets/3d89f636-735f-4f85-aa7e-27be6caa7cae)
 
 This repository presents a multivariable exponential regression model to estimate **Average CPM** (counts per minute) based on **Time**, **Radiation dose rate (Usv/hr)**, **Standard Deviation of CPM (sdCPM)**, and **Total CPM Count**.
 
