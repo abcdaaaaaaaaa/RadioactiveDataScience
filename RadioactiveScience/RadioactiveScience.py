@@ -214,8 +214,4 @@ for t in t_fine:
         f.write("\n")
         f.write("\n")
 
-with open("EstimationReport.txt", "r+") as f:
-    content = f.read().rstrip("\n")
-    f.seek(0)
-    f.write(content + "\n")
-    f.truncate()
+df = df.iloc[:-2]
