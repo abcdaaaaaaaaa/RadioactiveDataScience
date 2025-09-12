@@ -29,6 +29,14 @@ print(formatted)
 print("")
 print("")
 
+with open("DataReport.txt", "a") as f:
+    f.write("\n")
+    f.write("\n")
+    f.write(formatted)
+    f.write("\n")
+    f.write("\n")
+    f.write("\n")
+
 with open("EstimationReport.txt", "a") as f:
     f.write("\n")
     f.write("\n")
@@ -199,6 +207,30 @@ fig_multi_y.write_html("Multi_RadioactiveScience.html")
 
 print(f"R²_Usv/hr={r2_usvhr:.4f} | R²_Avg (CPM)={r2_avg:.4f} | R²_sdCPM={r2_sdCPM:.4f} | R²_CPM Count={r2_cpm:.4f}\n")
 
+for idx, t in enumerate(times):
+    data = [
+        ["Usv/hr", f"{usvhr_values[idx]:.4f}"],
+        ["Avg (CPM)", f"{avg_values[idx]:.4f}"],
+        ["sdCPM", f"{sdCPM_values[idx]:.4f}"],
+        ["CPM Count", f"{cpm_count_values[idx]:.4f}"]
+    ]
+    df_table = pd.DataFrame(data, columns=[f"t={t:.4f}", "DecayValues"])
+    print(df_table.to_string(index=False))
+    print("")
+    with open("DataReport.txt", "a") as f:
+        f.write(df_table.to_string(index=False))
+        f.write("\n")
+        f.write("\n")
+
+with open("DataReport.txt", "r+") as f:
+    lines = f.readlines()
+    f.seek(0)
+    f.writelines(lines[:-1])
+    f.truncate()
+
+print("")
+print(f"R²_Usv/hr={r2_usvhr:.4f} | R²_Avg (CPM)={r2_avg:.4f} | R²_sdCPM={r2_sdCPM:.4f} | R²_CPM Count={r2_cpm:.4f}\n")
+
 for t in t_fine:
     data = [
         ["Usv/hr", f"{decay_usvhr(t):.4f}"],
@@ -214,4 +246,8 @@ for t in t_fine:
         f.write("\n")
         f.write("\n")
 
-df = df.iloc[:-2]
+with open("EstimationReport.txt", "r+") as f:
+    lines = f.readlines()
+    f.seek(0)
+    f.writelines(lines[:-1])
+    f.truncate()
