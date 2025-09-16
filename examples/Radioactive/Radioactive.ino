@@ -1,5 +1,5 @@
 // (1) The library also supports data science applications such as gradient Multidimensional Radioactive Decay Estimation from Python!
-// (1) https://github.com/abcdaaaaaaaaa/RadioactiveDataScience/blob/main/RadioactiveScience
+// (1) https://github.com/abcdaaaaaaaaa/RadioactiveDataScience/tree/main/RadioactiveScience
 
 #include <Radioactive.h>
 
@@ -33,4 +33,3 @@ void loop() {
     Serial.print("CPM Count: ");
     Serial.println(Radioactive.count);
 }
-
