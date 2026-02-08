@@ -10,7 +10,7 @@
 #define Avg1        (true)
 #define CPM_Count1  (true)
 #define sdCPM1      (true)
-#define LOG_PERIOD1 (30000)
+#define LOG_PERIOD1 (30000) // This indicates how often (in seconds) the sensor will take a measurement.
 #define GeigerPin1  (35) // for ESP32 D35 (ADC1)
 
 GeigerCounter Radioactive(uSvhr1, Avg1, CPM_Count1, sdCPM1, LOG_PERIOD1, GeigerPin1);
