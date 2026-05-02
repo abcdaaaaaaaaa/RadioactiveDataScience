@@ -54,4 +54,4 @@ Where:
 
 ## For detailed explanation, You can also check out the github <a href="https://github.com/abcdaaaaaaaaa/RadioactiveDataScience/wiki">Wiki Page!
 
-## You can access the library's article <a href="https://project.info/RadioactiveDataScience">Here!
+## You can access the library's article <a href="https://project.uzay.info/RadioactiveDataScience">Here!
